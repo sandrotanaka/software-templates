@@ -30,8 +30,8 @@ spec:
       required:
         - cluster_id
         - namespace
-        - modelmesh_host
-        - modelmesh_port
+        - model_endpoint
+        - model_path
         - owner
       properties:
         cluster_id:
@@ -49,9 +49,9 @@ spec:
           description: REST endpoint for the inference API
           default: https://redhat-dog-image-generation.apps.wearedevs.rl97.p1.openshiftapps.com
         model_path:
-          title: REST endpoint for the inference API
+          title: REST endpoint path for the inference API
           type: string
-          description: REST endpoint for the inference API
+          description: REST endpoint path for the inference API
           default: /v1/models/model:predict
         owner:
           title: Owner
