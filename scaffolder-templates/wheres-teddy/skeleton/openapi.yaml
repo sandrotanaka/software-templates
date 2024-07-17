@@ -20,7 +20,7 @@ paths:
                 - data
               properties:
                 prompt:
-                  type: prompt
+                  type: string
       responses:
         '200':
           description: Successfully ran inference
