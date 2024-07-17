@@ -21,7 +21,7 @@ image:
   tag: ${{values.image_tag}}
 
 env:
-  REST_URL: ${{values.model_url}}
+  REST_URL: ${{values.model_endpoint}}
 
 imagePullSecrets: []
 nameOverride: ""
