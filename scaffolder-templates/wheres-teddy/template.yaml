@@ -90,8 +90,7 @@ spec:
           cluster_id: ${{parameters.cluster_id}}
           namespace: ${{parameters.namespace}}
           component_id: ${{parameters.namespace}}-wheres-teddy-app
-          modelmesh_host: modelmesh-serving.text-to-image
-          modelmesh_port: 8033
+          model_url: ${{parameters.model_endpoint}}/${{parameters.model_path}}
     - id: publishSource
       name: Publishing to Source Code Repository
       action: publish:github
@@ -128,8 +127,7 @@ spec:
           image_host: ${{parameters.image_host}}
           image_name: ${{parameters.namespace}}/wheres-teddy-app
           image_tag: ${{parameters.image_tag}}
-          modelmesh_host: modelmesh-serving.text-to-image
-          modelmesh_port: 8033
+          model_url: ${{parameters.model_endpoint}}/${{parameters.model_path}}
         targetPath: ./tenant-gitops
     - id: publishGitops
       name: Publishing to Deployment Resource Repository
