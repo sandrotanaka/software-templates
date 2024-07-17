@@ -17,6 +17,8 @@ components:
       endpoints:
         - name: vote-ui
           targetPort: 8080
+          secure: false
+          protocol: https
 commands:
   - id: run-python-app
     exec:
